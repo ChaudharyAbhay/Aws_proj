@@ -29,7 +29,7 @@ onEvent("login_b_login", "click", function( ) {
    for (var i =0; i < records.length; i++) {
      if ((records[i]).name == getText("user_name_log")) {
        if ((records[i]).main == getText("pass_log")) {
-         setScreen("News");
+         setScreen("Home_main");
        } else {
          showElement("hide_log");
        }
@@ -55,32 +55,32 @@ onEvent("register", "click", function( ) {
 });
 onEvent("dropdown1", "change", function( ) {
   if (getText("dropdown1") == "Home") {
-    setScreen("Home");
+    setScreen("Home_main");
   }
 });
 onEvent("dropdown2", "change", function( ) {
   if (getText("dropdown2") == "Home") {
-    setScreen("Home");
+    setScreen("Home_main");
   }
 });
 onEvent("dropdown3", "change", function( ) {
   if (getText("dropdown3") == "Home") {
-    setScreen("Home");
+    setScreen("Home_main");
   }
 });
 onEvent("dropdown4", "change", function( ) {
   if (getText("dropdown4") == "Home") {
-    setScreen("Home");
+    setScreen("Home_main");
   }
 });
 onEvent("dropdown5", "change", function( ) {
   if (getText("dropdown5") == "Home") {
-    setScreen("Home");
+    setScreen("Home_main");
   }
 });
 onEvent("dropdown6", "change", function( ) {
   if (getText("dropdown6") == "Home") {
-    setScreen("Home");
+    setScreen("Home_main");
   }
 });
 onEvent("dropdown1", "change", function( ) {
