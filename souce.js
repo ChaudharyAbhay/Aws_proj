@@ -25,16 +25,19 @@ onEvent("register_reg", "click", function( ) {
   });
 });
 onEvent("login_b_login", "click", function( ) {
-  var username_get = getColumn("data_user", "name");
-  var pass_get = getColumn("data_user", "main");
-  if (getText("user_name_log") == __) {
-    if (getText("pass_log") == "pass_get") {
-      playSpeech("You Have Sucessfully Logined", "female", "English");
-      setScreen("Calculate");
-    }
-  } else {
-    showElement("hide_log");
-  }
+ readRecords("data_user", {}, function(records) {
+   for (var i =0; i < records.length; i++) {
+     if ((records[i]).name == getText("user_name_log")) {
+       if ((records[i]).main == getText("pass_log")) {
+         setScreen("News");
+       } else {
+         showElement("hide_log");
+       }
+     } else {
+       showElement("hide_log");
+     }
+   }
+ });
 });
 onEvent("return_login", "click", function( ) {
   setScreen("Home");
