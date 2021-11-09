@@ -373,3 +373,28 @@ onEvent("tip_3", "click", function( ) {
 onEvent("tip_4", "click", function( ) {
   open("https://www.cseindia.org/removing-pesticides-from-fruits-and-vegetables-2681#:~:text=Washing%20with%202%25%20of%20salt,removed%20by%20cold%20water%20washing.");
 });
+onEvent("hint", "click", function( ) {
+  playSpeech("Welcome!", "female", "English");
+  setScreen("hint");
+});
+onEvent("return_buy", "click", function( ) {
+  setScreen("Home_main");
+});
+onEvent("return_calculate", "click", function( ) {
+  setScreen("Home_main");
+});
+onEvent("return_hints", "click", function( ) {
+  setScreen("Home_main");
+});
+onEvent("return_sell", "click", function( ) {
+  setScreen("Home_main");
+});
+onEvent("return_news", "click", function( ) {
+  setScreen("Home_main");
+});
+onEvent("return_tools", "click", function( ) {
+  setScreen("Home_main");
+});
+onEvent("return_tips", "click", function( ) {
+  setScreen("Home_main");
+});
