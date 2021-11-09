@@ -398,3 +398,36 @@ onEvent("return_tools", "click", function( ) {
 onEvent("return_tips", "click", function( ) {
   setScreen("Home_main");
 });
+onEvent("login_info", "click", function( ) {
+  setScreen("login_info_s");
+});
+onEvent("home_info", "click", function( ) {
+  setScreen("home_info_s");
+});
+onEvent("buy_info", "click", function( ) {
+  setScreen("buy_info_s");
+});
+onEvent("sell_info", "click", function( ) {
+  setScreen("sell_info_s");
+});
+onEvent("news_info", "click", function( ) {
+  setScreen("news_info_s");
+});
+onEvent("calculate_info", "click", function( ) {
+  setScreen("calculate_info_s");
+});
+onEvent("tools_info", "click", function( ) {
+  setScreen("tools_info_s");
+});
+onEvent("tips_info", "click", function( ) {
+  setScreen("tips_info_s");
+});
+onEvent("safe_info", "click", function( ) {
+  setScreen("safe_info_s");
+});
+onEvent("feedback_buton", "click", function( ) {
+  setScreen("feedback_s");
+});
+onEvent("hint", "click", function( ) {
+  setScreen("hints");
+});
