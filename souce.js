@@ -1,3 +1,4 @@
+console.log(getUserId());
 setScreen("Home");
 hideElement("calc_out");
 hideElement("Eroor_acess");
@@ -430,4 +431,34 @@ onEvent("feedback_buton", "click", function( ) {
 });
 onEvent("hint", "click", function( ) {
   setScreen("hints");
+});
+onEvent("submit_feedback", "click", function( ) {
+  var feeddata = {};
+  feeddata.main = getText("feedback_int");
+  feeddata.user = getText("user_int_feed")
+  createRecord("feedback_data", feeddata , function(record) {
+    console.log("record created with id:" + record.id);
+  });
+});
+onEvent("sell_buton", "click", function( ) {
+  open("https://kisanmandi.com/index.php/free-farmer-registration");
+});
+onEvent("button_sell_2", "click", function( ) {
+  open("https://kisanmandi.com/index.php/free-farmer-registration");
+});
+onEvent("buy_tools", "click", function( ) {
+  open("https://www.amazon.in/Kraft-Seeds-Garden-Gardening-Gloves/dp/B07WJVSRSH/ref=sr_1_6?crid=170WWG4A4FZ8I&keywords=tools%2Bfor%2Bagriculture%2Bwork&qid=1636697600&sprefix=Tools%2BFor%2Bagri%2Caps%2C732&sr=8-6&th=1");
+});
+onEvent("buy_pipe", "click", function( ) {
+  open("https://www.amazon.in/CINAGROTM-Layered-Braided-Sprayer-Connect/dp/B07M85WTTK/ref=sr_1_6?keywords=hose+pipe&qid=1636697685&sr=8-6");
+});
+onEvent("buy_weeder", "click", function( ) {
+  open("https://www.amazon.in/SPAARK-NX212-Power-Weeder/dp/B09KT6T88G/ref=sr_1_23_sspa?keywords=Agriculture+Tools&qid=1636697269&sr=8-23-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzS0tZRVBaTEwzOVdVJmVuY3J5cHRlZElkPUEwNTkzMTEwMVJIMEkzTzVBOFBZOSZlbmNyeXB0ZWRBZElkPUEwOTI4MDk4MjdCRkNWSFlPMDVNOSZ3aWRnZXROYW1lPXNwX210ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU=");
+});
+onEvent("get_id", "click", function( ) {
+  setScreen("get_id_s");
+  setText("idprint", getUserId());
+});
+onEvent("policy_b", "click", function( ) {
+  open("https://code.org/privacy");
 });
