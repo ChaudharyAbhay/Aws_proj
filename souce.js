@@ -1,4 +1,7 @@
 console.log(getUserId());
+hideElement("loss_ai");
+hideElement("profit_ai");
+hideElement("tips_ai");
 setScreen("Home");
 hideElement("calc_out");
 hideElement("Eroor_acess");
@@ -12,6 +15,65 @@ hideElement("rate_f");
 hideElement("rate_l");
 hideElement("rate_s");
 hideElement("hide_log");
+hideElement("crop_nonsuit");
+onEvent("A.I.", "click", function( ) {
+  setScreen("A.I_1");
+});
+onEvent("tips_ai", "click", function( ) {
+  setScreen("Tips");
+});
+onEvent("find_ai", "click", function( ) {
+  if (getText("drop_ai") == "Rice") {
+  if (getText("month_sowing") == "Januray") {
+    showElement("crop_nonsuit");
+  }
+  if (getText("month_sowing") == "Feburary") {
+    showElement("crop_nonsuit");
+  }
+  if (getText("month_sowing") == "March") {
+    showElement("crop_nonsuit");
+  }
+  if (getText("month_sowing") == "April") {
+    showElement("crop_nonsuit");
+  }
+  if (getText("month_sowing") == "May") {
+    showElement("crop_nonsuit");
+  }
+  if (getText("month_sowing") == "June") {
+    if (getText("rate_sqm") > "8") {
+      onEvent("find_ai", "click", function( ) {
+        showElement("loss_ai");
+        showElement("tips_ai");
+      });
+    }
+  }
+  if (getText("month_sowing") == "July") {
+    if ("8" < getText("rate_sqm")) {
+      showElement("profit_ai");
+    }
+  }
+  if (getText("month_sowing") == "August") {
+    showElement("crop_nonsuit");
+  }
+  if (getText("month_sowing") == "September") {
+    showElement("crop_nonsuit");
+  }
+  if (getText("month_sowing") == "October") {
+    showElement("crop_nonsuit");
+  }
+  if (getText("month_sowing") == "November") {
+    showElement("crop_nonsuit");
+  }
+  if (getText("month_sowing") == "December") {
+    showElement("crop_nonsuit");
+  }
+  } else {
+    return false;
+  }
+});
+onEvent("calc_ai", "click", function( ) {
+  setScreen("Calculate");
+});
 onEvent("register_reg", "click", function( ) {
   playSpeech("Thanks!For regestering", "female", "English");
   var UserData={};
@@ -461,4 +523,31 @@ onEvent("get_id", "click", function( ) {
 });
 onEvent("policy_b", "click", function( ) {
   open("https://code.org/privacy");
+});
+onEvent("hint_b", "click", function( ) {
+  setScreen("hints");
+});
+onEvent("problem_1", "click", function( ) {
+  setScreen("feedback_s");
+});
+onEvent("problem_2", "click", function( ) {
+  setScreen("feedback_s");
+});
+onEvent("problem_3", "click", function( ) {
+  setScreen("feedback_s");
+});
+onEvent("problem_4", "click", function( ) {
+  setScreen("feedback_s");
+});
+onEvent("problem_5", "click", function( ) {
+  setScreen("feedback_s");
+});
+onEvent("problem_6", "click", function( ) {
+  setScreen("feedback_s");
+});
+onEvent("problem_7", "click", function( ) {
+  setScreen("feedback_s");
+});
+onEvent("problem_8", "click", function( ) {
+  setScreen("feedback_s");
 });
